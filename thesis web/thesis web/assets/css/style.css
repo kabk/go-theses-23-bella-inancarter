@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+@font-face {
+  font-family: "Your Font Name";
+  src: url("../fonts/yourfontname/yourfontname-roman.woff2"),
+    url("../fonts/yourfontname/yourfontname-roman.woff"),
+    url("../fonts/yourfontname/yourfontname-roman.eot"),
+    url("../fonts/yourfontname/yourfontname-roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/yourfontname/yourfontname-roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
+/* VARIABLES */
+
+:root {
+  /* Color settings */
+  --color-background: white;
+  --color-text: black;
+  --color-text-link: black;
+
+  /* Font settings */
+  --font-family: "Your Font Name", "Times New Roman", "Times", sans-serif;
+  --font-size: 20px;
+
+  /* Margins settings */
+  --margin: 1rem;
+}
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  position: relative;
+  background-color: var(--color-background);
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+a {
+  color: black;
+  font-size: 20px;
+  line-height: 125%;
+  position: relative;
+  color-text: black;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex; */
+  width: 100%;
+  max-width: 800px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  font-size: 100px;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  text-decoration: underline;
+}
+
+h3 {
+  /* h3 style */
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+h4,
+h5,
+h6 {
+  /* h4-h5-h6 style */
+}
+
+p {
+  /* paragraph style */
+  font-size: 20px;
+  line-height: 125%;
+  position: relative;
+  color-text: black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  font-family: 'Lora', serif;
+}
+
+ol,
+ul {
+  /* ordered list and unordered list styles */
+}
+
+blockquote {
+  /* blockquote element style */
+}
+
+hr {
+  /* horizontal rule style */
+  border: none;
+}
+figure {
+  text-align: center;
+}
+/* PAGE STYLES */
+
+/* page structure */
+
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* navigation */
+
+header {
+  text-align: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+figcaption {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+/* content */
+.side-bar {
+  box-sizing: content-box;
+  position: -webkit-sticky;
+  top: 25px;
+  height: 100vh;
+  position: sticky;
+  width: 5%;
+}
+
+.main {
+  display: block;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 95%;
+  height: 100%;
+}
+
+#header {
+  background-image: url("../../content/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(252, 184, 60);
+  display: flex;
+  justify-content: center;
+  text-shadow: 5px 5px 5px #c90808;
+  height: 100vh;
+  align-items: center;
+}
+.sticky:nth-child(even) {
+  background-color: white;
+}
+
+.side-bar a img {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  display: flex;
+}
+div#bibliography {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* GENERAL USABILITY */
+
+/* hide desktop mobile etc */
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* responsive typeface */
+
+@media (max-width: 298px) {
+  :root {
+    --font-size: 15px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 299px) and (max-width: 339px) {
+  :root {
+    --font-size: 16px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 340px) and (max-width: 439px) {
+  :root {
+    --font-size: 17px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 440px) and (max-width: 599px) {
+  :root {
+    --font-size: 18px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 600px) and (max-width: 779px) {
+  :root {
+    --font-size: 19px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 780px) and (max-width: 992px) {
+  :root {
+    --font-size: 20px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  :root {
+    --font-size: 22px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 1201px) and (max-width: 1319px) {
+  :root {
+    --font-size: 24px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 1320px) and (max-width: 1619px) {
+  :root {
+    --font-size: 26px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 1620px) and (max-width: 1879px) {
+  :root {
+    --font-size: 28px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+@media (min-width: 1880px) {
+  :root {
+    --font-size: 30px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-family);
+  }
+}
+
+/* website media queries */
+
+@media (max-width: 768px) {
+  /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
+  /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+
+  .main {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: calc(100% - 75px);
+  }
+
+  /* utilities */
+
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: block;
+  }
+  .side-bar {
+    width: 50px;
+  }
+  .side-bar a img {
+    width: 40px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 339px) {
+  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+}
+
+@media (max-width: 779px) and (orientation: landscape) {
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+}
+
+@media (min-width: 780px) and (max-width: 992px) {
+  /* use this query to apply style for 'small' desktop screens */
+}
